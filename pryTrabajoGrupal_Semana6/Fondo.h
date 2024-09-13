@@ -1,26 +1,4 @@
 #pragma once
-class Mapa {
-private:
-public:
-	Mapa() {};
-	~Mapa() {};
-	void fondoNivel() {
-	
-	};
-
-	void fondoNivel_parte1() {
-
-	};
-	void fondoNivel_parte2() {
-
-	};
-	void fondoNivel_parte3() {
-
-	};
-	void fondoNivel_parte4() {
-
-	};
-};
 class Presentacion {
 //			De acuerdo al enunciado, aqui se pondria un logo o nonmbre del equipo (de no tener uno solo decir "GRUPO 9")
 //			Caracteres identificados [#9GOPRU] - adicionales []
