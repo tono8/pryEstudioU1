@@ -18,7 +18,7 @@ using namespace std;
 void p(short x, short y) {
     Console::SetCursorPosition(x, y);
 }
-void wS(int width, int height) {
+void wS(short width, short height) {
     Console::SetWindowSize(width, height);
     Console::CursorVisible = false;
 }
