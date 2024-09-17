@@ -1,5 +1,6 @@
-//SINOPSIS:			El jugador tomará el rol de un "Guardián del Medio Ambiente" cuya misión es restaurar el equilibrio natural 
-//					de un ecosistema que ha sido dañado por la contaminación y la deforestación
+//SINOPSIS (De acuerdo al enunciado):			El jugador tomará el rol de un "Guardián del Medio Ambiente" cuya misión es restaurar el equilibrio natural 
+//												de un ecosistema que ha sido dañado por la contaminación y la deforestación
+//SINOPSIS:										
 
 #include "Controladora.h"
 int main() {
