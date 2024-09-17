@@ -6,5 +6,4 @@ private:
 public:
 	Presentacion() {};
 	~Presentacion() {};
-	}
 };

@@ -2,12 +2,13 @@
 class Enemigo
 {
 protected:
-	int EnmX;
-	int EnmY;
+	int EnmX, EnmY;
+	int dX, dY;
 public:
 	Enemigo(int x, int y) {
 		EnmX = x;
 		EnmY = y;
+		dX = dY = 0;
 	}
 	void setEnmX(int x) {
 		EnmX = x;

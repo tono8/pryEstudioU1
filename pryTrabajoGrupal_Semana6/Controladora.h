@@ -144,13 +144,13 @@ public:
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();
-				borrar_jugador(x_P, y_P);
+				borrar_jugador_v2(x_P, y_P);
 				if (tecla == DERECHA && (nivel_prueba[y_P][x_P + 5] == 0 && nivel_prueba[y_P + 1][x_P + 6] == 0 && nivel_prueba[y_P + 2][x_P + 6] == 0)) x_P++;
 				if (tecla == IZQUIERDA && (nivel_prueba[y_P][x_P] == 0 && nivel_prueba[y_P + 1][x_P - 1] == 0 && nivel_prueba[y_P + 2][x_P - 1] == 0)) x_P--;
 				if (tecla == ARRIBA && (nivel_prueba[y_P][x_P] == 0 && nivel_prueba[y_P - 1][x_P + 1] == 0 && nivel_prueba[y_P - 1][x_P + 2] == 0 && nivel_prueba[y_P - 1][x_P + 3] == 0 && nivel_prueba[y_P - 1][x_P + 4] == 0 && nivel_prueba[y_P][x_P + 5] == 0)) y_P--;
 				if (tecla == ABAJO && (nivel_prueba[y_P + 3][x_P] == 0 && nivel_prueba[y_P + 3][x_P + 1] == 0 && nivel_prueba[y_P + 3][x_P + 2] == 0 && nivel_prueba[y_P + 3][x_P + 3] == 0 && nivel_prueba[y_P + 3][x_P + 4] == 0 && nivel_prueba[y_P + 3][x_P + 5] == 0)) y_P++;
 			}
-			dibujar_jugador(x_P, y_P);
+			dibujar_jugador_v2(x_P, y_P);
 		}
 	}
 };
