@@ -2,8 +2,11 @@
 #include "Dependencias.h"
 #include "Fondo.h"
 #include "Jugador.h"
+#include "ArregloAgua.h"
+#include "ArregloSemillas.h"
+#include "ArregloReciclable.h"
 
-class Juego : protected Jugador { // Herencia
+class Juego : protected Jugador { // Herencia a la clase Jugador
 private:
 public:
 	Juego() {};
@@ -145,7 +148,7 @@ public:
 				if (tecla == ARRIBA && (nivel_prueba[y_P][x_P] == 0 && nivel_prueba[y_P - 1][x_P + 1] == 0 && nivel_prueba[y_P - 1][x_P + 2] == 0 && nivel_prueba[y_P - 1][x_P + 3] == 0 && nivel_prueba[y_P - 1][x_P + 4] == 0 && nivel_prueba[y_P][x_P + 5] == 0)) y_P--;
 				if (tecla == ABAJO && (nivel_prueba[y_P + 3][x_P] == 0 && nivel_prueba[y_P + 3][x_P + 1] == 0 && nivel_prueba[y_P + 3][x_P + 2] == 0 && nivel_prueba[y_P + 3][x_P + 3] == 0 && nivel_prueba[y_P + 3][x_P + 4] == 0 && nivel_prueba[y_P + 3][x_P + 5] == 0)) y_P++;
 			}
-			dibuja_jugador(x_P, y_P);
+			dibujar_jugador(x_P, y_P);
 		}
 	}
 };

@@ -2,18 +2,30 @@
 class Reciclables
 {
 protected:
-	short ReciX;
-	short ReciY;
+	int ReciX;
+	int ReciY;
 public:
-	Reciclables(short x, short y) {
+	Reciclables(int x, int y) {
 		ReciX = x;
 		ReciY = y;
 	}
-	void setReciclablesX(int x) {
+	void setReciX(int x) {
 		ReciX = x;
 	}
-	void setReciclablesY(int y) {
+	void setReciY(int y) {
 		ReciY = y;
 	}
-	~Reciclables();
+	void dibujar_residuo() {
+		// Dibujar residuos reciclables aqui
+	}
+	void borrar_residuo() {
+
+	}
+	int getReciX() {
+		return ReciX;
+	}
+	int getReciY() {
+		return ReciY;
+	}
+	~Reciclables() {};
 };
