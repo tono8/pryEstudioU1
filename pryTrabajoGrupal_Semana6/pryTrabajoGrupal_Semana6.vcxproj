@@ -115,11 +115,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agua.h" />
+    <ClInclude Include="Arbol.h" />
     <ClInclude Include="ArregloAgua.h" />
+    <ClInclude Include="ArregloArbol.h" />
+    <ClInclude Include="ArregloEnemigo.h" />
     <ClInclude Include="ArregloReciclable.h" />
     <ClInclude Include="ArregloSemillas.h" />
     <ClInclude Include="Controladora.h" />
     <ClInclude Include="Dependencias.h" />
+    <ClInclude Include="Enemigo.h" />
     <ClInclude Include="Jugador.h" />
     <ClInclude Include="Fondo.h" />
     <ClInclude Include="Reciclables.h" />

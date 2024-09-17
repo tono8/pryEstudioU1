@@ -16,7 +16,7 @@ public:
 		AguaY = y;
 	}
 	void dibujar_agua() {
-		// Dibujar semillas aqui
+		// Dibujar agua aqui
 	}
 	void borrar_agua() {
 

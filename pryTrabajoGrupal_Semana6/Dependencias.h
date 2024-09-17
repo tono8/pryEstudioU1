@@ -2,6 +2,7 @@
 #include "iostream"
 #include "conio.h"
 #include "vector"
+#include "stdio.h"
 #include "cstdlib"
 #include "ctime"
 
@@ -13,8 +14,8 @@
 #define COLUMNAS 180
 #define FILAS 60
 
-using namespace System;
 using namespace std;
+using namespace System;
 
 void p(short x, short y) {
     Console::SetCursorPosition(x, y);

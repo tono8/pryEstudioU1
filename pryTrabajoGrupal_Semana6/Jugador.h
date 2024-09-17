@@ -6,6 +6,10 @@ protected:
 public:
     Jugador() {};
 	~Jugador() {};
+
+    // ===================================================== Primera version del jugador
+    // 
+    // ================================= Convertir a comentario al crear el nuevo diseño
     void dibujar_jugador(int x, int y) {
         b_c(1), f_c(10);
         p(x, y); cout << char(219) << char(223);
@@ -22,4 +26,5 @@ public:
         p(x, y + 2); cout << "  ";
         p(x + 4, y + 2); cout << "  ";
     }
+    // =================================================================================
 };

@@ -2,6 +2,8 @@
 #include "Dependencias.h"
 #include "Fondo.h"
 #include "Jugador.h"
+#include "ArregloEnemigo.h"
+#include "ArregloArbol.h"
 #include "ArregloAgua.h"
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
