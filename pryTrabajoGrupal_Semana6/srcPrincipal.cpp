@@ -4,7 +4,7 @@
 
 #include "Controladora.h"
 int main() {
-	wS(180, 60);
+	wS(120, 36);
 
 	clock_t t, ts; //VARAIBLES PARA SABER EL TIEMPO
 	int secs = 0;

@@ -11,8 +11,8 @@
 #define ARRIBA 72
 #define ABAJO 80
 
-#define COLUMNAS 180
-#define FILAS 60
+#define COLUMNAS 120
+#define FILAS 36
 
 using namespace std;
 using namespace System;

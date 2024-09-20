@@ -15,7 +15,7 @@ public:
 	void setAguaY(int y) {
 		AguaY = y;
 	}
-	void dibujar_agua() {
+	void dibujar_agua(int x, int y) {
 		Console::SetCursorPosition(x, y);
 		Console::ForegroundColor = ConsoleColor::DarkBlue;
 		cout << " _ ";

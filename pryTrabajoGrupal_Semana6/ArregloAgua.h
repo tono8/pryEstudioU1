@@ -22,14 +22,4 @@ public:
 		return arreglo3;
 	}
 	~ArrAgua() {};
-
-	void dibujarAgua(int x, int y) {
-		Console::SetCursorPosition(x, y);
-		Console::ForegroundColor = ConsoleColor::DarkBlue;
-		cout << " _ ";
-		Console::SetCursorPosition(x, y + 1);
-		cout << "/ \\";
-		Console::SetCursorPosition(x, y + 2);
-		cout << "\\_/";
-	}
 };
