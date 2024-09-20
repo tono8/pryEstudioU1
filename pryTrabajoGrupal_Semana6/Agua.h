@@ -25,6 +25,13 @@ public:
 		cout << "\\_/"; 
 	}
 	void borrar_agua() {
+		Console::SetCursorPosition(AguaX, AguaY);
+		Console::ForegroundColor = ConsoleColor::DarkBlue;
+		cout << " _  ";
+		Console::SetCursorPosition(AguaX, AguaY + 1);
+		cout << "/ \\";
+		Console::SetCursorPosition(AguaX, AguaY + 2);
+		cout << "\\_/";
 
 	}
 	int getAguaX() {

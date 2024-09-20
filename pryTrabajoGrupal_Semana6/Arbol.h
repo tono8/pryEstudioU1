@@ -16,7 +16,8 @@ public:
 		ArbolY = y;
 	}
 	void dibujar_arbol() {
-		// Dibujar el arbol aqui
+		p(ArbolX, ArbolY); b_c(1), f_c(10); cout << "()";
+		p(ArbolX, ArbolY+1); cout << "||";
 	}
 	int getArbolX() {
 		return ArbolX;

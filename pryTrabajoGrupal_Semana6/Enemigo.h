@@ -20,16 +20,24 @@ public:
 
 		Console::SetCursorPosition(EnmX, EnmY);
 		Console::ForegroundColor = ConsoleColor::Red;
-		cout << "°\\/°";
+		cout << " °\\/°";
 		Console::SetCursorPosition(EnmX, EnmY + 1);
-		cout << " __";
+		cout << "  __  ";
 		Console::SetCursorPosition(EnmX, EnmY + 2);
-		cout << "[L l]";
+		cout << " [L l] ";
 		Console::SetCursorPosition(EnmX, EnmY + 3);
 		cout << " ==== ";
 	}
 	void borrar_enemigo() {
-
+		Console::SetCursorPosition(EnmX, EnmY);
+		Console::ForegroundColor = ConsoleColor::Black;
+		cout << "     ";
+		Console::SetCursorPosition(EnmX, EnmY + 1);
+		cout << "     ";
+		Console::SetCursorPosition(EnmX, EnmY + 2);
+		cout << "     ";
+		Console::SetCursorPosition(EnmX, EnmY + 3);
+		cout << "     ";
 	}
 	int getEnmX() {
 		return EnmX;

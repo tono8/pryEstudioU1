@@ -25,7 +25,13 @@ public:
 		cout << "\\_/";
 	}
 	void borrar_semilla() {
-
+		Console::SetCursorPosition(SmiX, SmiY);
+		Console::ForegroundColor = ConsoleColor::Black;
+		cout << "   ";
+		Console::SetCursorPosition(SmiX, SmiY + 1);
+		cout << "    ";
+		Console::SetCursorPosition(SmiX, SmiY + 2);
+		cout << "    ";
 	}
 	int getSmiX() {
 		return SmiX;

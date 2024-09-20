@@ -23,7 +23,11 @@ public:
 		cout << "@@@";
 	}
 	void borrar_residuo() {
-
+		Console::SetCursorPosition(ReciX, ReciY);
+		Console::ForegroundColor = ConsoleColor::Black;
+		cout << "   ";
+		Console::SetCursorPosition(ReciX, ReciY + 1);
+		cout << "   ";
 	}
 	int getReciX() {
 		return ReciX;

@@ -10,6 +10,11 @@
 
 class Juego : protected Jugador { // Herencia a la clase Jugador
 private:
+	vector<Enemigo*>arreglo1;
+	vector<Arbol*>arreglo2;
+	vector<Agua*>arreglo3;
+	vector<Semillas*>arreglo4;
+	vector<Reciclables*>arreglo5;
 public:
 	Juego() {};
 	~Juego() {};
@@ -121,6 +126,8 @@ public:
 				}
 			}
 		}
+		Arbol *a = new Arbol (15, 16);
+		a->dibujar_arbol();
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();
