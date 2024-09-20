@@ -21,4 +21,13 @@ public:
 		return arreglo4;
 	}
 	~ArrSemillas() {};
+	void dibujarAgua(int x, int y) {
+		Console::SetCursorPosition(x, y);
+		Console::ForegroundColor = ConsoleColor::DarkYellow;
+		cout << " _ ";
+		Console::SetCursorPosition(x, y + 1);
+		cout << "/ \\";
+		Console::SetCursorPosition(x, y + 2);
+		cout << "\\_/";
+	}
 };
