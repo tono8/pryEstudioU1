@@ -24,7 +24,7 @@ int main() {
 		}
 		Console::Title = secs.ToString();
 		//objPresentacion->PRESENTACION_539_15_v2(11,10);
-		objJuego->nivel();
+		objJuego->nivel_prueba();
 	}
 	return 0;
 }
