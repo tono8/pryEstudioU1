@@ -16,7 +16,13 @@ public:
 		AguaY = y;
 	}
 	void dibujar_agua() {
-		// Dibujar agua aqui
+		Console::SetCursorPosition(x, y);
+		Console::ForegroundColor = ConsoleColor::DarkBlue;
+		cout << " _ ";
+		Console::SetCursorPosition(x, y + 1);
+		cout << "/ \\";
+		Console::SetCursorPosition(x, y + 2);
+		cout << "\\_/";
 	}
 	void borrar_agua() {
 
