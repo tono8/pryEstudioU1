@@ -16,7 +16,7 @@ public:
 		ArbolY = y;
 	}
 	void dibujar_arbol() {
-		// Dibujar el arbol aqui
+		
 	}
 	int getArbolX() {
 		return ArbolX;
