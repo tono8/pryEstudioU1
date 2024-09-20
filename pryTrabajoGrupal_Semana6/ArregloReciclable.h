@@ -4,6 +4,8 @@ class ArrReciclables
 {
 protected:
 	vector<Reciclables*>arreglo5;
+	int x;
+	int y;
 public:
 	ArrReciclables() {
 		arreglo5 = vector<Reciclables*>();
@@ -21,4 +23,11 @@ public:
 		return arreglo5;
 	}
 	~ArrReciclables() {};
+	void dibujarDesechos() {
+		Console::SetCursorPosition(x, y);
+		Console::ForegroundColor = ConsoleColor::DarkGray;
+		cout << "@@@";
+		Console::SetCursorPosition(x, y + 1);
+		cout << "@@@";
+	}
 };
