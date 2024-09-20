@@ -17,7 +17,16 @@ public:
 		EnmY = y;
 	}
 	void dibujar_enemigo() {
-		// Dibujar al humano aqui
+
+		Console::SetCursorPosition(EnmX, EnmY);
+		Console::ForegroundColor = ConsoleColor::Red;
+		cout << "°\\/°";
+		Console::SetCursorPosition(EnmX, EnmY + 1);
+		cout << " __";
+		Console::SetCursorPosition(EnmX, EnmY + 2);
+		cout << "[L l]";
+		Console::SetCursorPosition(EnmX, EnmY + 3);
+		cout << " ==== ";
 	}
 	void borrar_enemigo() {
 
