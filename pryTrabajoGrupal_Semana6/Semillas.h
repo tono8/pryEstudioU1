@@ -16,7 +16,13 @@ public:
 		SmiY = y;
 	}
 	void dibujar_semilla() {
-		// Dibujar semillas aqui
+		Console::SetCursorPosition(SmiX, SmiY);
+		Console::ForegroundColor = ConsoleColor::DarkYellow;
+		cout << " _ ";
+		Console::SetCursorPosition(SmiX, SmiY + 1);
+		cout << "/ \\";
+		Console::SetCursorPosition(SmiX, SmiY + 2);
+		cout << "\\_/";
 	}
 	void borrar_semilla() {
 

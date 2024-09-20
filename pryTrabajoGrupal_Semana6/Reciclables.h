@@ -16,7 +16,11 @@ public:
 		ReciY = y;
 	}
 	void dibujar_residuo() {
-		// Dibujar residuos reciclables aqui
+		Console::SetCursorPosition(ReciX, ReciY);
+		Console::ForegroundColor = ConsoleColor::DarkGray;
+		cout << "@@@";
+		Console::SetCursorPosition(ReciX, ReciY + 1);
+		cout << "@@@";
 	}
 	void borrar_residuo() {
 

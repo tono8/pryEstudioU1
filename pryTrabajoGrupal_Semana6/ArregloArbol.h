@@ -22,16 +22,4 @@ public:
 		return arreglo2;
 	}
 	~ArrArbol() {};
-
-	void dibujarArbol() {
-		Console::SetCursorPosition(x, y);
-		Console::ForegroundColor = ConsoleColor::DarkGreen;
-		cout << "    c|c    ";
-		Console::SetCursorPosition(x, y + 1);
-		cout << "  cc|||cc  ";
-		Console::SetCursorPosition(x, y + 2);
-		cout << "ccc||||ccc ";
-		Console::SetCursorPosition(x, y + 1);
-		cout << "    ||      ";
-	}
 };

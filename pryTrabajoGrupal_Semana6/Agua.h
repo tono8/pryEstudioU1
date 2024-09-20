@@ -15,14 +15,14 @@ public:
 	void setAguaY(int y) {
 		AguaY = y;
 	}
-	void dibujar_agua(int x, int y) {
-		Console::SetCursorPosition(x, y);
+	void dibujar_agua() {
+		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::DarkBlue;
 		cout << " _ ";
-		Console::SetCursorPosition(x, y + 1);
+		Console::SetCursorPosition(AguaX, AguaY + 1);
 		cout << "/ \\";
-		Console::SetCursorPosition(x, y + 2);
-		cout << "\\_/";
+		Console::SetCursorPosition(AguaX, AguaY + 2);
+		cout << "\\_/"; 
 	}
 	void borrar_agua() {
 
