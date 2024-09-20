@@ -17,7 +17,7 @@ public:
 	}
 	void dibujar_semilla() {
 		Console::SetCursorPosition(SmiX, SmiY);
-		Console::ForegroundColor = ConsoleColor::DarkBlue;
+		Console::ForegroundColor = ConsoleColor::DarkYellow;
 		cout << " _ ";
 		Console::SetCursorPosition(SmiX, SmiY + 1);
 		cout << "/ \\";
