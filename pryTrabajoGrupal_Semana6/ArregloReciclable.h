@@ -23,11 +23,4 @@ public:
 		return arreglo5;
 	}
 	~ArrReciclables() {};
-	void dibujarDesechos() {
-		Console::SetCursorPosition(x, y);
-		Console::ForegroundColor = ConsoleColor::DarkGray;
-		cout << "@@@";
-		Console::SetCursorPosition(x, y + 1);
-		cout << "@@@";
-	}
 };
