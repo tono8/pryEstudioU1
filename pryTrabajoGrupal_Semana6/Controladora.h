@@ -78,8 +78,8 @@ public:
 				}
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();
@@ -180,8 +180,8 @@ public:
 				}
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();

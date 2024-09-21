@@ -18,20 +18,13 @@ public:
 	void dibujar_semilla() {
 		Console::SetCursorPosition(SmiX, SmiY);
 		Console::ForegroundColor = ConsoleColor::DarkYellow;
-		cout << " _ ";
-		Console::SetCursorPosition(SmiX, SmiY + 1);
-		cout << "/ \\";
-		Console::SetCursorPosition(SmiX, SmiY + 2);
-		cout << "\\_/";
+		cout << "*";
+
 	}
 	void borrar_semilla() {
 		Console::SetCursorPosition(SmiX, SmiY);
 		Console::ForegroundColor = ConsoleColor::Black;
-		cout << "   ";
-		Console::SetCursorPosition(SmiX, SmiY + 1);
-		cout << "    ";
-		Console::SetCursorPosition(SmiX, SmiY + 2);
-		cout << "    ";
+		cout << " ";
 	}
 	int getSmiX() {
 		return SmiX;
