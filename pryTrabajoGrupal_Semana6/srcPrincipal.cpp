@@ -31,9 +31,9 @@ int main() {
 		objRecurso->generarRecursos();
 		objJuego->nivel_prueba();
 
-		if (agua == 1 && semillas == 1 && recurso == 1) {
+		/*if (agua == 1 && semillas == 1 && recurso == 1) {
 
-		}
+		}*/
 		//objJuego->fondo1();
 		return 0;
 	}
