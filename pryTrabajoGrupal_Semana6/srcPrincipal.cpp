@@ -28,7 +28,7 @@ int main() {
 
 		//objPresentacion->MENU();
 		//objPresentacion->TITULO_YOUWON_v2(21, 11);
-		//objRecurso->generarRecursos();
+		objRecurso->generarRecursos();
 		objJuego->nivel_prueba();
 		//objJuego->fondo1();
 		return 0;
