@@ -1,6 +1,5 @@
 //SINOPSIS (De acuerdo al enunciado):			El jugador tomará el rol de un "Guardián del Medio Ambiente" cuya misión es restaurar el equilibrio natural 
-//												de un ecosistema que ha sido dañado por la contaminación y la deforestación
-//SINOPSIS:										
+//												de un ecosistema que ha sido dañado por la contaminación y la deforestación								
 
 #include "Controladora.h"
 #include "Recurso.h" 
@@ -24,10 +23,14 @@ int main() {
 			ts = t + CLOCKS_PER_SEC;
 		}
 		Console::Title = secs.ToString();
-		//objPresentacion->PRESENTACION_539_15_v2(11,10);
-		objRecurso->generarRecursos();
+		//objPresentacion->LOGO_EQUIPO(); // PANTALLA PRINCIPAL
+
+
+		//objPresentacion->MENU();
+		//objPresentacion->TITULO_YOUWON_v2(21, 11);
+		//objRecurso->generarRecursos();
 		objJuego->nivel_prueba();
 		//objJuego->fondo1();
+		return 0;
 	}
-	return 0;
 }

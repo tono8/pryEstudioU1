@@ -3,6 +3,7 @@
 #include "conio.h"
 #include "vector"
 #include "stdio.h"
+#include "sstream"
 #include "cstdlib"
 #include "ctime"
 
