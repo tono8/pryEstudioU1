@@ -18,20 +18,12 @@ public:
 	void dibujar_agua(int x, int y) {
 		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::DarkBlue;
-		cout << " _ ";
-		Console::SetCursorPosition(AguaX, AguaY + 1);
-		cout << "/ \\";
-		Console::SetCursorPosition(AguaX, AguaY + 2);
-		cout << "\\_/";
+		cout << "~";
 	}
 	void borrar_agua(int x, int y) {
 		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::Black;
 		cout << "   ";
-		Console::SetCursorPosition(AguaX, AguaY + 1);
-		cout << "    ";
-		Console::SetCursorPosition(AguaX, AguaY + 2);
-		cout << "    ";
 	}
 	int getAguaX() {
 		return AguaX;

@@ -30,6 +30,10 @@ int main() {
 		//objPresentacion->TITULO_YOUWON_v2(21, 11);
 		objRecurso->generarRecursos();
 		objJuego->nivel_prueba();
+
+		if (agua == 1 && semillas == 1 && recurso == 1) {
+
+		}
 		//objJuego->fondo1();
 		return 0;
 	}

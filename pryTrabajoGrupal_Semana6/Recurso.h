@@ -35,7 +35,7 @@ public:
 			nuevoAgua->dibujar_agua(x, y);
 		}
 
-		for (int i = 0; i < 3; ++i) {
+		for (int i = 0; i < 7; ++i) {
 			int x = generarAleatorio(12, 110);
 			int y = generarAleatorio(10, 32);
 			Enemigo* nuevoEnemigo = new Enemigo(x, y);
