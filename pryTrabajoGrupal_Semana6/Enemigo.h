@@ -17,7 +17,6 @@ public:
 		EnmY = y;
 	}
 	void dibujar_enemigo() {
-
 		Console::SetCursorPosition(EnmX, EnmY);
 		Console::ForegroundColor = ConsoleColor::Red;
 		cout << " °\\/°";
@@ -38,6 +37,28 @@ public:
 		cout << "     ";
 		Console::SetCursorPosition(EnmX, EnmY + 3);
 		cout << "     ";
+	}
+	void mover_enemigo(int direccion) {
+		if (direccion == 0) {
+			if (EnmY - 1 != 0) {
+				EnmY--;
+			}
+		}
+		if (direccion == 1) {
+			if (EnmY + 1 != 39) {
+				EnmY++;
+			}
+		}
+		if (direccion == 2) {
+			if (EnmX + 1 != 79) {
+				EnmX++;
+			}
+		}
+		if (direccion == 3) {
+			if (EnmX - 1 != 0) {
+				EnmX--;
+			}
+		}
 	}
 	int getEnmX() {
 		return EnmX;
