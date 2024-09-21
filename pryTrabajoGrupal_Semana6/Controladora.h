@@ -15,8 +15,6 @@ private:
 	vector<Agua*>arreglo3;
 	vector<Semillas*>arreglo4;
 	vector<Reciclables*>arreglo5;
-
-
 public:
 	Juego() {};
 	~Juego() {};
