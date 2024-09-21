@@ -27,6 +27,7 @@ int main() {
 		//objPresentacion->PRESENTACION_539_15_v2(11,10);
 		objRecurso->generarRecursos();
 		objJuego->nivel_prueba();
+		//objJuego->fondo1();
 	}
 	return 0;
 }

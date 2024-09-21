@@ -1,7 +1,4 @@
 #pragma once
-
-#include <cstdlib>
-#include <ctime>
 #include "ArregloEnemigo.h"
 #include "ArregloArbol.h"
 #include "ArregloAgua.h"
@@ -18,7 +15,7 @@ public:
 	}
 	void generarRecursos() {
 		for (int i = 0; i < 3; i++) {
-			int x = rand() % 87;
+			int x = rand() % 42;
 			int y = rand() % 33;
 			Semillas* nuevaSemilla = new Semillas(x, y);
 			semillasArr.agregarSemillas(nuevaSemilla);
