@@ -241,8 +241,31 @@ public:
 			if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
 				(jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
 
-				arreglo3.at(i)->borrar_agua(_AguaX, _AguaY);
+				arreglo3.at(i)->borrar_agua();
 				arreglo3.erase(arreglo3.begin() + i);
+				i--;
+			}
+		}
+	}
+};
+
+class colisionRecurso3 : public ArrReciclables, public Reciclables {
+private:
+	Jugador jugador;
+public:
+	void colisionAgua() {
+		for (int i = 0; i < arreglo5.size(); i++) {
+			int _AguaX = arreglo5.at(i)->getReciX();
+			int _AguaY = arreglo5.at(i)->getReciY();
+
+			int jugadorX = jugador.returnJugadorX();
+			int jugadorY = jugador.returnJugadorY();
+
+			if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
+				(jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
+
+				arreglo5.at(i)->borrar_residuo();
+				arreglo5.erase(arreglo5.begin() + i);
 				i--;
 			}
 		}

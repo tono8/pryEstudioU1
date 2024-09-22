@@ -20,7 +20,7 @@ public:
 		Console::ForegroundColor = ConsoleColor::DarkBlue;
 		cout << "~";
 	}
-	void borrar_agua(int x, int y) {
+	void borrar_agua() {
 		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::Black;
 		cout << " ";

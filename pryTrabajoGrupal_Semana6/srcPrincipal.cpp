@@ -15,13 +15,13 @@ int main() {
 	while (1) {
 		
 		//Console::Title = secs.ToString();
-		objPresentacion->LOGO_EQUIPO(); // PANTALLA PRINCIPAL
+		//objPresentacion->LOGO_EQUIPO(); // PANTALLA PRINCIPAL
 
 		//objPresentacion->MENU();
 		//objPresentacion->TITULO_YOUWON_v2(21, 11);
-		//objRecurso->generarRecursos();
-		//objJuego->nivel_prueba();
-		//objJuego->fondo1();
+		objRecurso->generarRecursos();
+		objJuego->nivel_prueba();
+		objJuego->fondo1();
 		return 0;
 	}
 }
