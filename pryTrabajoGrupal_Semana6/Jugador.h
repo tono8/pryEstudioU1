@@ -4,7 +4,7 @@ protected:
     // Posicion del jugador
     int x_P = 57, y_P = 20;
 public:
-    Jugador() {};
+    Jugador(int x, int y) : x_P(x), y_P(y) {};
 	~Jugador() {};
     int returnJugadorX() {
         return x_P;

@@ -2,6 +2,121 @@
 #include "ArregloEnemigo.h"//Librerias 1
 #include "Recurso.h"//Librerias 2
 #include "Jugador.h";//Jugador
+#include "ArregloAgua.h"
+#include "ArregloEnemigo.h"
+#include "ArregloReciclable.h"
+
+
+
+class colisionRecurso : public ArrSemillas, public Semillas {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorSemillas;
+
+public:
+    colisionRecurso(Jugador& j, int x, int y) : Semillas(x, y), jugador(j), collected(false), contadorSemillas(0) {
+    }
+
+    void colisionSemillas() {
+        collected = false;
+        for (int i = 0; i < arreglo4.size(); i++) {
+            int _SmiX = arreglo4.at(i)->getSmiX();
+            int _SmiY = arreglo4.at(i)->getSmiY();
+
+            int jugadorX = jugador.returnJugadorX();
+            int jugadorY = jugador.returnJugadorY();
+
+            // Lógica de colisión
+            if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) &&
+                (jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
+                arreglo4.at(i)->borrar_semilla();
+                arreglo4.erase(arreglo4.begin() + i);
+                i--;
+                collected = true;
+                contadorSemillas++;
+            }
+        }
+    }
+
+    int getContadorSemillas() {
+        return contadorSemillas;
+    }
+};
+
+
+class colisionRecurso2 : public ArrAgua, public Agua {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorAgua;
+
+public:
+    colisionRecurso2(Jugador& j, int x, int y) : Agua(x, y), jugador(j), collected(false), contadorAgua(0) {}
+
+    void colisionAgua() {
+        collected = false;
+        for (int i = 0; i < arreglo3.size(); i++) {
+            int _AguaX = arreglo3.at(i)->getAguaX();
+            int _AguaY = arreglo3.at(i)->getAguaY();
+
+            int jugadorX = jugador.returnJugadorX();
+            int jugadorY = jugador.returnJugadorY();
+
+            if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
+                (jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
+
+                arreglo3.at(i)->borrar_agua();
+                arreglo3.erase(arreglo3.begin() + i);
+                i--;
+                collected = true;
+                contadorAgua++;
+            }
+        }
+    }
+
+    int getContadorAgua() {
+        return contadorAgua;
+    }
+};
+
+class colisionRecurso3 : public ArrReciclables, public Reciclables {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorReciclables;
+
+public:
+    colisionRecurso3(Jugador& j, int x, int y) : Reciclables(x, y), jugador(j), collected(false), contadorReciclables(0) {
+    }
+
+    void colisionReciclables() {
+        collected = false;
+
+        for (int i = 0; i < arreglo5.size(); i++) {
+            int _ReciX = arreglo5.at(i)->getReciX();
+            int _ReciY = arreglo5.at(i)->getReciY();
+
+            int jugadorX = jugador.returnJugadorX();
+            int jugadorY = jugador.returnJugadorY();
+            if ((jugadorX == _ReciX || jugadorX == _ReciX + 1 || jugadorX == _ReciX - 1) &&
+                (jugadorY == _ReciY || jugadorY == _ReciY + 1 || jugadorY == _ReciY - 1)) {
+
+                arreglo5.at(i)->borrar_residuo();
+                arreglo5.erase(arreglo5.begin() + i);
+                i--;
+                collected = true;
+                contadorReciclables++;
+            }
+        }
+    }
+
+    int getContadorReciclables() {
+        return contadorReciclables;
+    }
+};
+
+
 
 
 

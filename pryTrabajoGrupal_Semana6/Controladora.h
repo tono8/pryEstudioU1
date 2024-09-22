@@ -7,6 +7,8 @@
 #include "ArregloAgua.h"
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
+using namespace std;
+using namespace System;
 
 class Juego : protected Jugador {
 private:
@@ -203,100 +205,5 @@ public:
 			dibujar_jugador_v3(x_P, y_P);
 			Console::Title = secs.ToString();
 		}
-	}
-};
-
-class colisionRecurso: public ArrSemillas, public Semillas {
-private:
-	Jugador jugador;
-	bool collected;
-	int contadorSemillas;
-public:
-	
-
-	void colisionSemillas() {
-		collected = false;
-		for (int i = 0; i < arreglo4.size(); i++) {
-			int _SmiX = arreglo4.at(i)->getSmiX();
-			int _SmiY = arreglo4.at(i)->getSmiY();
-			
-			int jugadorX = jugador.returnJugadorX();
-			int jugadorY = jugador.returnJugadorY();
-			if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) && (jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
-				arreglo4.at(i)->borrar_semilla();
-				arreglo4.erase(arreglo4.begin() + i);
-				i--;
-				collected = true;
-				contadorSemillas++;
-			}
-		}
-	}
-	int getContadorSemillas() {
-		return contadorSemillas; 
-	}
-};
-
-class colisionRecurso2 : public ArrAgua, public Agua {
-private:
-	Jugador jugador; 
-	bool collected;
-	int contadorAgua;
-public:
-	void colisionAgua() {
-		collected = false;
-		for (int i = 0; i < arreglo3.size(); i++) {
-			int _AguaX = arreglo3.at(i)->getAguaX();
-			int _AguaY = arreglo3.at(i)->getAguaY();
-
-			int jugadorX = jugador.returnJugadorX();
-			int jugadorY = jugador.returnJugadorY();
-
-			if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
-				(jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
-
-				arreglo3.at(i)->borrar_agua();
-				arreglo3.erase(arreglo3.begin() + i);
-				i--;
-				collected = true;
-			}
-		}
-	}
-	int getContadorAgua() {
-		return contadorAgua; 
-	}
-};
-
-
-class colisionRecurso3 : public ArrReciclables, public Reciclables {
-private:
-	Jugador jugador;
-	bool collected;
-	int contadorReciclables;
-
-public:
-	void colisionReciclables() {
-		collected = false; 
-
-		for (int i = 0; i < arreglo5.size(); i++) {
-			int _ReciX = arreglo5.at(i)->getReciX(); 
-			int _ReciY = arreglo5.at(i)->getReciY(); 
-
-			int jugadorX = jugador.returnJugadorX(); 
-			int jugadorY = jugador.returnJugadorY(); 
-
-			if ((jugadorX == _ReciX || jugadorX == _ReciX + 1 || jugadorX == _ReciX - 1) &&
-				(jugadorY == _ReciY || jugadorY == _ReciY + 1 || jugadorY == _ReciY - 1)) {
-
-				arreglo5.at(i)->borrar_residuo(); 
-				arreglo5.erase(arreglo5.begin() + i); 
-				i--; 
-				collected = true; 
-				contadorReciclables++; 
-			}
-		}
-	}
-
-	int getContadorReciclables() {
-		return contadorReciclables;
 	}
 };
