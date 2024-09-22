@@ -1,6 +1,6 @@
 #pragma once
 #include "Dependencias.h"
-#include "Fondo.h"
+//#include "Fondo.h"
 #include "Jugador.h"
 #include "ArregloEnemigo.h"
 #include "ArregloArbol.h"
@@ -8,7 +8,7 @@
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
 
-class Juego : protected Jugador { // Herencia a la clase Jugador
+class Juego : protected Jugador {
 private:
 	//vector<Enemigo*>arreglo1;
 	vector<Arbol*>arreglo2;
