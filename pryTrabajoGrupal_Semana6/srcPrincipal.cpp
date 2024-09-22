@@ -26,7 +26,7 @@ int main() {
 		//objPresentacion->LOGO_EQUIPO(); // PANTALLA PRINCIPAL
 
 
-		//objPresentacion->MENU();
+		objPresentacion->MENU();
 		//objPresentacion->TITULO_YOUWON_v2(21, 11);
 		objRecurso->generarRecursos();
 		objJuego->nivel_prueba();

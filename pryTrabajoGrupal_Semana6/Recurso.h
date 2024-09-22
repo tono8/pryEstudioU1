@@ -17,7 +17,6 @@ public:
 	Recurso() {
 		srand(time(0));
 	}
-	//x12 y10 a x110 y32
 	void generarRecursos() {
 		for (int i = 0; i < 3; i++) {
 

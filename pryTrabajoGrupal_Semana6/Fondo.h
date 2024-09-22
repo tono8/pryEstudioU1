@@ -395,7 +395,7 @@ public:
 		case 1:
 			system("cls");
 			//INSTRUCCIONES();
-			INSTRUCCIONES_ALT();
+			INSTRUCCIONES();
 			break;
 		case 2:
 			system("cls");
