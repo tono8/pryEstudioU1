@@ -14,7 +14,7 @@
 
 #define COLUMNAS 120
 #define FILAS 36
-
+//limites son x12 y10 a x110 y32
 #define leftlimitx 12
 #define rightlimitx 110
 #define uplimity 10
