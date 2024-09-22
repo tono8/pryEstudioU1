@@ -42,16 +42,10 @@ public:
 			aguaArr.agregarAgua(nuevoAgua);
 			nuevoAgua->dibujar_agua(x, y);
 		}
-		for (int i = 0; i < 10; ++i) {
-			int x = generarAleatorio(leftlimitx, rightlimitx);
-			int y = generarAleatorio(uplimity, downlimity);
-			Reciclables* nuevoReciclables = new Reciclables(x, y);
-			reciclablesArr.agregarReciclables(nuevoReciclables);
-			nuevoReciclables->dibujar_residuo();
-		}
+
 		for (int i = 0; i < 7; ++i) {
-			int x = generarAleatorio(leftlimitx, rightlimitx);
-			int y = generarAleatorio(uplimity, downlimity);
+			int x = generarAleatorio(12, 110);
+			int y = generarAleatorio(10, 32);
 			Enemigo* nuevoEnemigo = new Enemigo(x, y);
 			enemigoArr.agregarEnemigo(nuevoEnemigo);
 			nuevoEnemigo->dibujar_enemigo();
