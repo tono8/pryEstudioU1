@@ -4,6 +4,10 @@
 #include "ArregloAgua.h"
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
+int leftlimitx = 12;
+int rightlimitx = 110;
+int uplimity = 10;
+int downlimity = 32;
 int generarAleatorio(int M, int N) {
 
 	int tam = rand() % (N - M + 1) + M;//GENERAMOS EL NUMERO ALEATORIO
@@ -20,10 +24,7 @@ public:
 		srand(time(0));
 	}
 	//limites son x12 y10 a x110 y32
-	int leftlimitx = 12;
-	int rightlimitx = 110;
-	int uplimity = 10;
-	int downlimity = 32;
+
 
 	void generarRecursos() {
 		for (int i = 0; i < 10; i++) {
