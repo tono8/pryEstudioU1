@@ -10,10 +10,37 @@ public:
 
 	//"Innecesario pero se ve bien"
 	//ENLACE DE LAS FUENTES DE LETRA: http://www.roysac.com/thedrawfonts-tdf.html#1
+	void FONT59X_2_10(int x, int y) {
+		p(x, y); b_c(1), f_c(7); cout << char(220); b_c(7), f_c(10); cout << char(176); f_c(15); cout << char(176) << char(177); b_c(15), f_c(7); cout << char(176); b_c(7), f_c(15); cout << char(177) << char(176); f_c(10); cout << char(176); b_c(1), f_c(7); cout << char(220);
+		p(x, y + 1); b_c(7), f_c(10); cout << char(176) << char(177) << char(177); b_c(10), f_c(1); cout << char(176); b_c(7); cout << char(220) << char(220); b_c(10); cout << char(176); b_c(7), f_c(10); cout << char(177) << char(177) << char(176);
+		p(x, y + 2); cout << char(177); b_c(10), f_c(7); cout << char(176) << char(176); f_c(1); cout << char(176);
+		p(x + 6, y + 2); cout << char(176); f_c(7); cout << char(176) << char(176); b_c(7), f_c(10); cout << char(177);
+		p(x, y + 3); b_c(1), f_c(3); cout << char(223) << char(223) << char(223) << char(223) << " "; b_c(1), f_c(10); cout << char(220); b_c(10), f_c(7); cout << char(176) << char(176) << char(176) << char(176);
+		p(x + 2, y + 4); b_c(1), f_c(3); cout << char(220); f_c(10); cout << char(220); b_c(10), f_c(16); cout << char(178) << char(177); f_c(7); cout << char(176) << char(176); b_c(1), f_c(10); cout << char(223);
+		p(x, y + 5); cout << char(220); b_c(10), f_c(3); cout << char(176) << char(176); b_c(10), f_c(16); cout << char(177) << " "; b_c(1), f_c(10); cout << char(223); f_c(3); cout << char(220) << char(220) << char(220) << char(220);
+		p(x, y + 6); b_c(3), f_c(10); cout << char(177); b_c(10), f_c(3); cout << char(176) << char(176); f_c(1); cout << char(176);
+		p(x + 6, y + 6); b_c(10), f_c(1); cout << char(178); f_c(3); cout << char(176) << char(176); b_c(3), f_c(10); cout << char(177);
+		p(x, y + 7); cout << char(223) << char(177) << char(177); b_c(10), f_c(3); cout << char(176) << char(176) << char(176) << char(176); b_c(3), f_c(10); cout << char(177) << char(177) << char(223);
+		p(x, y + 8); b_c(1), f_c(3); cout << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223);
+	}
 	void FONT59X_3_10(int x, int y) {
 		p(x, y); b_c(1), f_c(7); cout << char(220); b_c(7), f_c(10); cout << char(176); f_c(15); cout << char(176) << char(177); b_c(15), f_c(7); cout << char(176); b_c(7), f_c(15); cout << char(177) << char(176); f_c(10); cout << char(176); b_c(1), f_c(7); cout << char(220);
 		p(x, y + 1); b_c(7), f_c(10); cout << char(176) << char(177) << char(177); b_c(10), f_c(1); cout << char(176); b_c(7); cout << char(220) << char(220); b_c(10); cout << char(176); b_c(7), f_c(10); cout << char(177) << char(177) << char(176);
-		p(x, y + 2); cout << char(177);
+		p(x, y + 2); cout << char(177); b_c(10), f_c(7); cout << char(176) << char(176); f_c(1); cout << char(176);
+		p(x + 6, y + 2); cout << char(176); f_c(7); cout << char(176) << char(176); b_c(7), f_c(10); cout << char(177);
+		p(x, y + 3); b_c(1), f_c(10); cout << char(223); f_c(8); cout << char(223) << char(223); f_c(10); cout << char(223) << " "; b_c(16), f_c(10); cout << char(220) << char(178); b_c(10), f_c(7); cout << char(176) << char(176) << char(176);
+		p(x, y + 4); b_c(1), f_c(10); cout << char(220); f_c(8); cout << char(220) << char(220); f_c(10); cout << char(220) << " "; f_c(8); cout << char(223); b_c(10), f_c(16); cout << char(176); f_c(7); cout << char(176) << char(176); f_c(10); cout << char(219);
+		p(x, y + 5); b_c(3), f_c(10); cout << char(177); b_c(10), f_c(3); cout << char(176) << char(176); f_c(1); cout << char(176);
+		p(x + 6, y + 5); b_c(10), f_c(1); cout << char(178); f_c(3); cout << char(176) << char(176); b_c(3), f_c(10); cout << char(177);
+		p(x, y + 6); b_c(3), f_c(10); cout << char(177); b_c(10), f_c(3); cout << char(176) << char(176); f_c(1); cout << char(176);
+		p(x + 6, y + 6); b_c(10), f_c(1); cout << char(178); f_c(3); cout << char(176) << char(176); b_c(3), f_c(10); cout << char(177);
+		p(x, y + 7); cout << char(223) << char(177) << char(177); b_c(10), f_c(3); cout << char(176) << char(176) << char(176) << char(176); b_c(3), f_c(10); cout << char(177) << char(177) << char(223);
+		p(x + 1, y + 8); b_c(1), f_c(3); cout << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223) << char(223);
+	}
+	void FONT59X_POW_10(int x, int y) {
+		p(x + 2, y); b_c(1), f_c(10); cout << char(220); b_c(10), f_c(7); cout << char(219) << char(178) << char(178) << char(178) << char(178) << char(178) << char(219); b_c(1), f_c(10); cout << char(220);
+		p(x + 1, y + 1); cout << char(220); b_c(10), f_c(7); cout << char(178); b_c(7), f_c(10); cout << char(176) << char(176); b_c(1); cout << char(178); f_c(7); cout << char(223); f_c(10); cout << char(178); b_c(7); cout << char(176) << char(176); b_c(10), f_c(7); cout << char(178); b_c(1), f_c(10); cout << char(220);
+		p(x, y + 2); f_c(8); cout << char(220); b_c(7), f_c(10); cout << char(176); b_c(7), f_c(10); cout << char(178) << char(178); b_c(1); cout << char(178); f_c(8); cout << char(223) << " " << char(223); f_c(10); cout << char(178); b_c(7); cout << char(178) << char(178); f_c(10); cout << char(176); b_c(1), f_c(8); cout << char(220);
 	}
 	//FONT INFO
 	//BROTHOOD.TDF (Brotherhood) - N° 116 - By: Roy/SAC
@@ -389,7 +416,10 @@ public:
 		MENU();
 	}
 	void LOGO_EQUIPO() {
-		FONT59X_3_10(55, 13); b_c(1), f_c(15);
+		FONT59X_3_10(44, 13);
+		FONT59X_POW_10(55, 11);
+		FONT59X_2_10(69, 13);
+		b_c(1), f_c(15);
 		system("pause>0");
 		system("cls");
 		MENU();
