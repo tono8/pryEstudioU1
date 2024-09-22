@@ -209,8 +209,13 @@ public:
 class colisionRecurso: public ArrSemillas, public Semillas {
 private:
 	Jugador jugador;
+	bool collected;
+	int contadorSemillas;
 public:
+	
+
 	void colisionSemillas() {
+		collected = false;
 		for (int i = 0; i < arreglo4.size(); i++) {
 			int _SmiX = arreglo4.at(i)->getSmiX();
 			int _SmiY = arreglo4.at(i)->getSmiY();
@@ -221,16 +226,24 @@ public:
 				arreglo4.at(i)->borrar_semilla();
 				arreglo4.erase(arreglo4.begin() + i);
 				i--;
+				collected = true;
+				contadorSemillas++;
 			}
 		}
+	}
+	int getContadorSemillas() {
+		return contadorSemillas; 
 	}
 };
 
 class colisionRecurso2 : public ArrAgua, public Agua {
 private:
 	Jugador jugador; 
+	bool collected;
+	int contadorAgua;
 public:
 	void colisionAgua() {
+		collected = false;
 		for (int i = 0; i < arreglo3.size(); i++) {
 			int _AguaX = arreglo3.at(i)->getAguaX();
 			int _AguaY = arreglo3.at(i)->getAguaY();
@@ -244,16 +257,23 @@ public:
 				arreglo3.at(i)->borrar_agua();
 				arreglo3.erase(arreglo3.begin() + i);
 				i--;
+				collected = true;
 			}
 		}
+	}
+	int getContadorAgua() {
+		return contadorAgua; 
 	}
 };
 
 class colisionRecurso3 : public ArrReciclables, public Reciclables {
 private:
 	Jugador jugador;
+	bool collected;
+	int contadorReciclables;
 public:
 	void colisionAgua() {
+		collected = false;
 		for (int i = 0; i < arreglo5.size(); i++) {
 			int _AguaX = arreglo5.at(i)->getReciX();
 			int _AguaY = arreglo5.at(i)->getReciY();
@@ -267,7 +287,12 @@ public:
 				arreglo5.at(i)->borrar_residuo();
 				arreglo5.erase(arreglo5.begin() + i);
 				i--;
+				collected = true;
+				contadorReciclables++;
 			}
 		}
+	}
+	int getContadorReciclables() {
+		return contadorReciclables;
 	}
 };
