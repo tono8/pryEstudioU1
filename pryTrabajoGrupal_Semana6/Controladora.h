@@ -272,26 +272,27 @@ private:
 	bool collected;
 	int contadorReciclables;
 public:
-	void colisionAgua() {
+	void colisionReciclables() {
 		collected = false;
 		for (int i = 0; i < arreglo5.size(); i++) {
-			int _AguaX = arreglo5.at(i)->getReciX();
-			int _AguaY = arreglo5.at(i)->getReciY();
+			int _SmiX = arreglo5.at(i)->getReciX(); 
+			int _SmiY = arreglo5.at(i)->getReciY();
 
 			int jugadorX = jugador.returnJugadorX();
 			int jugadorY = jugador.returnJugadorY();
 
-			if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
-				(jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
+			if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) &&
+				(jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
 
 				arreglo5.at(i)->borrar_residuo();
 				arreglo5.erase(arreglo5.begin() + i);
 				i--;
 				collected = true;
-				contadorReciclables++;
+				contadorReciclables++; 
 			}
 		}
 	}
+
 	int getContadorReciclables() {
 		return contadorReciclables;
 	}
