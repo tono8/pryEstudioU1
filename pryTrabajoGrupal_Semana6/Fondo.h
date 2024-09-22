@@ -1,8 +1,9 @@
 #pragma once
-class Presentacion {
+#include "Dependencias.h"
+#include "Controladora.h"
+class Presentacion: public Juego {
 //			De acuerdo al enunciado, aqui se pondria un logo o nombre del equipo (de no tener uno solo decir "GRUPO 9")
 //			Caracteres identificados [#9GOPRU] - adicionales []
-private:
 public:
 	Presentacion() {};
 	~Presentacion() {};
@@ -362,12 +363,14 @@ public:
 		TITULO_SALIR_116_2(x + 46, y + 12);
 	}
 
+
 	void INSTRUCCIONES() {
 		TITULO_INSTRUCCIONES_116(25, 2);
 		ICON_DIRECTIONALKEYS(12, 9);
 		p(36, 33); b_c(1), f_c(15); cout << "Presione cualquier tecla para continuar al juego";
 		system("pause>0");
 		system("cls");
+		fondo1();
 	}
 	void INSTRUCCIONES_ALT() {
 		TITULO_INSTRUCCIONES_116(25, 2);
@@ -385,6 +388,12 @@ public:
 		system("cls");
 		MENU();
 	}
+	void LOGO_EQUIPO() {
+		FONT59X_3_10(55, 13); b_c(1), f_c(15);
+		system("pause>0");
+		system("cls");
+		MENU();
+	}
 
 	void MENU() {
 		TITULO_MENU_116_v1(25, 19);
@@ -394,7 +403,6 @@ public:
 		{
 		case 1:
 			system("cls");
-			//INSTRUCCIONES();
 			INSTRUCCIONES();
 			break;
 		case 2:
@@ -409,12 +417,6 @@ public:
 			system("cls");
 			break;
 		}
-	}
-	void LOGO_EQUIPO() {
-		FONT59X_3_10(55, 13); b_c(1), f_c(15);
-		system("pause>0");
-		system("cls");
-		MENU();
 	}
 	void TEXT_INTEGRANTE1_L(int x, int y) {
 		p(x, y); b_c(1), f_c(15); cout << "Lieserl Ayala"; // Se nececita colocar el nombre completo
@@ -440,7 +442,7 @@ public:
 	}
 	void TITULO_GANAR_v2() {
 		TITULO_YOUWON_v2(1, 12);
-		p(1, 38); b_c(1), f_c(15); cout << "Presiona la tecla 'Esc' y luego vuelve a  presionar cualquier tecla para salir";
+		p(36, 33); b_c(1), f_c(15); cout << "Presiona la tecla 'Esc' y luego vuelve a  presionar cualquier tecla para salir";
 		system("pause>0");
 		while (true) {
 			if (kbhit()) {
