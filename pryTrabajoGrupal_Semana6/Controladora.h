@@ -1,6 +1,6 @@
 #pragma once
 #include "Dependencias.h"
-#include "Fondo.h"
+//#include "Fondo.h"
 #include "Jugador.h"
 #include "ArregloEnemigo.h"
 #include "ArregloArbol.h"
@@ -8,9 +8,9 @@
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
 
-class Juego : protected Jugador { // Herencia a la clase Jugador
+class Juego : protected Jugador {
 private:
-	vector<Enemigo*>arreglo1;
+	//vector<Enemigo*>arreglo1;
 	vector<Arbol*>arreglo2;
 	vector<Agua*>arreglo3;
 	vector<Semillas*>arreglo4;
@@ -76,8 +76,8 @@ public:
 				}
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();
@@ -175,12 +175,23 @@ public:
 				if (fondo_juego[f][c] == 21) {
 					b_c(3), f_c(1);
 					cout << char(223);
+					
 				}
+				b_c(1), f_c(15);
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		clock_t t, ts;//VARAIBLES PARA SABER EL TIEMPO
+		int secs = 0;
+		ts = clock() + CLOCKS_PER_SEC;
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
+
 		while (1) {
+			if ((t = clock()) >= ts)
+			{
+				++secs;
+				ts = t + CLOCKS_PER_SEC;
+			}
 			if (_kbhit()) {
 				char tecla = getch();
 				borrar_jugador_v3(x_P, y_P);
@@ -190,6 +201,7 @@ public:
 				if (tecla == ABAJO && (fondo_juego[y_P + 3][x_P] == 0 && fondo_juego[y_P + 3][x_P + 1] == 0 && fondo_juego[y_P + 4][x_P + 2] == 0 && fondo_juego[y_P + 4][x_P + 3] == 0 && fondo_juego[y_P + 4][x_P + 4] == 0 && fondo_juego[y_P + 3][x_P + 5] == 0 && fondo_juego[y_P + 3][x_P + 6] == 0)) y_P++;
 			}
 			dibujar_jugador_v3(x_P, y_P);
+			Console::Title = secs.ToString();
 		}
 	}
 };

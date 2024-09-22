@@ -23,7 +23,8 @@ public:
 	void borrar_agua(int x, int y) {
 		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::Black;
-		cout << "   ";
+		cout << " ";
+
 	}
 	int getAguaX() {
 		return AguaX;
