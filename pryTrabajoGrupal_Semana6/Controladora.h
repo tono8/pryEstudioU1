@@ -10,7 +10,7 @@
 
 class Juego : protected Jugador {
 private:
-	vector<Enemigo*>arreglo1;
+	//vector<Enemigo*>arreglo1;
 	vector<Arbol*>arreglo2;
 	vector<Agua*>arreglo3;
 	vector<Semillas*>arreglo4;
@@ -185,6 +185,7 @@ public:
 		ts = clock() + CLOCKS_PER_SEC;
 		//Arbol* a = new Arbol(15, 16);
 		//a->dibujar_arbol();
+
 		while (1) {
 			if ((t = clock()) >= ts)
 			{
