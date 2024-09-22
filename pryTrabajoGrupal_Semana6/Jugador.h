@@ -6,10 +6,11 @@ protected:
 public:
     Jugador() {};
 	~Jugador() {};
-    int returnJugador() {
+    int returnJugadorX() {
         return x_P;
     }
-    int returnJugador() {
+
+    int returnJugadorY() {
         return y_P;
     }
     // ===================================================== Primera version del jugador

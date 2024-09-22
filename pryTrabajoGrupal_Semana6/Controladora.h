@@ -208,12 +208,43 @@ public:
 
 class colisionRecurso: public ArrSemillas, public Semillas {
 private:
+	Jugador jugador;
 public:
 	void colisionSemillas() {
 		for (int i = 0; i < arreglo4.size(); i++) {
 			int _SmiX = arreglo4.at(i)->getSmiX();
 			int _SmiY = arreglo4.at(i)->getSmiY();
-			if()
+			
+			int jugadorX = jugador.returnJugadorX();
+			int jugadorY = jugador.returnJugadorY();
+			if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) && (jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
+				arreglo4.at(i)->borrar_semilla();
+				arreglo4.erase(arreglo4.begin() + i);
+				i--;
+			}
+		}
+	}
+};
+
+class colisionRecurso2 : public ArrAgua, public Agua {
+private:
+	Jugador jugador; 
+public:
+	void colisionAgua() {
+		for (int i = 0; i < arreglo3.size(); i++) {
+			int _AguaX = arreglo3.at(i)->getAguaX();
+			int _AguaY = arreglo3.at(i)->getAguaY();
+
+			int jugadorX = jugador.returnJugadorX();
+			int jugadorY = jugador.returnJugadorY();
+
+			if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
+				(jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
+
+				arreglo3.at(i)->borrar_agua(_AguaX, _AguaY);
+				arreglo3.erase(arreglo3.begin() + i);
+				i--;
+			}
 		}
 	}
 };
