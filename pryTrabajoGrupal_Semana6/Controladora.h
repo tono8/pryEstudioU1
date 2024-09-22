@@ -266,28 +266,31 @@ public:
 	}
 };
 
+
 class colisionRecurso3 : public ArrReciclables, public Reciclables {
 private:
 	Jugador jugador;
 	bool collected;
 	int contadorReciclables;
+
 public:
 	void colisionReciclables() {
-		collected = false;
+		collected = false; 
+
 		for (int i = 0; i < arreglo5.size(); i++) {
-			int _SmiX = arreglo5.at(i)->getReciX(); 
-			int _SmiY = arreglo5.at(i)->getReciY();
+			int _ReciX = arreglo5.at(i)->getReciX(); 
+			int _ReciY = arreglo5.at(i)->getReciY(); 
 
-			int jugadorX = jugador.returnJugadorX();
-			int jugadorY = jugador.returnJugadorY();
+			int jugadorX = jugador.returnJugadorX(); 
+			int jugadorY = jugador.returnJugadorY(); 
 
-			if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) &&
-				(jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
+			if ((jugadorX == _ReciX || jugadorX == _ReciX + 1 || jugadorX == _ReciX - 1) &&
+				(jugadorY == _ReciY || jugadorY == _ReciY + 1 || jugadorY == _ReciY - 1)) {
 
-				arreglo5.at(i)->borrar_residuo();
-				arreglo5.erase(arreglo5.begin() + i);
-				i--;
-				collected = true;
+				arreglo5.at(i)->borrar_residuo(); 
+				arreglo5.erase(arreglo5.begin() + i); 
+				i--; 
+				collected = true; 
 				contadorReciclables++; 
 			}
 		}
