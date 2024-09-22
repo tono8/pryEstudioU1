@@ -36,14 +36,7 @@ int main() {
         colAgua.colisionAgua();
         colReciclables.colisionReciclables();
 
-        cout << "Semillas recolectadas: " << colSemillas.getContadorSemillas() << endl;
-        cout << "Agua recolectada: " << colAgua.getContadorAgua() << endl;
-        cout << "Reciclables recolectados: " << colReciclables.getContadorReciclables() << endl;
     }
-
-    delete objPresentacion;
-    delete objRecurso;
-    delete objJuego;
 
     return 0;
 }
