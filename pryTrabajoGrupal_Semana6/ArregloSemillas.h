@@ -14,7 +14,7 @@ public:
 	Semillas* obtenerSemillas(int indice4) {
 		return arreglo4.at(indice4);
 	}
-	int sizeReciclables() {
+	int sizeSemillas() {
 		return arreglo4.size();
 	}
 	vector<Semillas*> retornar() {
