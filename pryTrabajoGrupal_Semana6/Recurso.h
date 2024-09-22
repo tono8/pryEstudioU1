@@ -4,10 +4,7 @@
 #include "ArregloAgua.h"
 #include "ArregloSemillas.h"
 #include "ArregloReciclable.h"
-int leftlimitx = 12;
-int rightlimitx = 110;
-int uplimity = 10;
-int downlimity = 32;
+
 int generarAleatorio(int M, int N) {
 
 	int tam = rand() % (N - M + 1) + M;//GENERAMOS EL NUMERO ALEATORIO
@@ -18,7 +15,7 @@ class Recurso {
 	ArrAgua aguaArr;
 	ArrReciclables reciclablesArr;
 	ArrEnemigo enemigoArr;
-	
+
 public:
 	Recurso() {
 		srand(time(0));
@@ -55,8 +52,8 @@ public:
 			Enemigo* nuevoEnemigo = new Enemigo(x, y);
 			enemigoArr.agregarEnemigo(nuevoEnemigo);
 			nuevoEnemigo->dibujar_enemigo();
-			}
-		}
 
+		}
 	}
+
 };
