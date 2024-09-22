@@ -15,6 +15,11 @@
 #define COLUMNAS 120
 #define FILAS 36
 
+#define leftlimitx 12
+#define rightlimitx 110
+#define uplimity 10
+#define downlimity 32
+
 using namespace std;
 using namespace System;
 

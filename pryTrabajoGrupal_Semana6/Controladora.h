@@ -76,8 +76,8 @@ public:
 				}
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
 		while (1) {
 			if (_kbhit()) {
 				char tecla = getch();
@@ -178,9 +178,10 @@ public:
 				}
 			}
 		}
-		Arbol* a = new Arbol(15, 16);
-		a->dibujar_arbol();
+		//Arbol* a = new Arbol(15, 16);
+		//a->dibujar_arbol();
 		while (1) {
+
 			if (_kbhit()) {
 				char tecla = getch();
 				borrar_jugador_v3(x_P, y_P);
@@ -190,6 +191,12 @@ public:
 				if (tecla == ABAJO && (fondo_juego[y_P + 3][x_P] == 0 && fondo_juego[y_P + 3][x_P + 1] == 0 && fondo_juego[y_P + 4][x_P + 2] == 0 && fondo_juego[y_P + 4][x_P + 3] == 0 && fondo_juego[y_P + 4][x_P + 4] == 0 && fondo_juego[y_P + 3][x_P + 5] == 0 && fondo_juego[y_P + 3][x_P + 6] == 0)) y_P++;
 			}
 			dibujar_jugador_v3(x_P, y_P);
+			
 		}
 	}
+};
+
+class colisionRecurso {
+private:
+
 };
