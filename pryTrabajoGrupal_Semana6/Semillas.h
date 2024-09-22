@@ -15,6 +15,7 @@ public:
 	void setSmiY(int y) {
 		SmiY = y;
 	}
+
 	void dibujar_semilla() {
 		Console::SetCursorPosition(SmiX, SmiY);
 		Console::ForegroundColor = ConsoleColor::DarkYellow;

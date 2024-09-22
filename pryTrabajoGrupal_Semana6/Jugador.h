@@ -6,7 +6,12 @@ protected:
 public:
     Jugador() {};
 	~Jugador() {};
-
+    int returnJugador() {
+        return x_P;
+    }
+    int returnJugador() {
+        return y_P;
+    }
     // ===================================================== Primera version del jugador
     void dibujar_jugador_v1(int x, int y) {
         b_c(1), f_c(10);

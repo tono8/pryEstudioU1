@@ -194,7 +194,14 @@ public:
 	}
 };
 
-class colisionRecurso {
+class colisionRecurso: public ArrSemillas, public Semillas {
 private:
-
+public:
+	void colisionSemillas() {
+		for (int i = 0; i < arreglo4.size(); i++) {
+			int _SmiX = arreglo4.at(i)->getSmiX();
+			int _SmiY = arreglo4.at(i)->getSmiY();
+			if()
+		}
+	}
 };
