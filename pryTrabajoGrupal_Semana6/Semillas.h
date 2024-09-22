@@ -19,7 +19,6 @@ public:
 		Console::SetCursorPosition(SmiX, SmiY);
 		Console::ForegroundColor = ConsoleColor::DarkYellow;
 		cout << "*";
-
 	}
 	void borrar_semilla() {
 		Console::SetCursorPosition(SmiX, SmiY);
