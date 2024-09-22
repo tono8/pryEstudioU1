@@ -1,4 +1,5 @@
 #pragma once
+
 #include "ArregloEnemigo.h"
 #include "ArregloArbol.h"
 #include "ArregloAgua.h"
@@ -14,13 +15,13 @@ class Recurso {
 	ArrSemillas semillasArr;
 	ArrAgua aguaArr;
 	ArrReciclables reciclablesArr;
-	ArrEnemigo enemigoArr;
+	
 
 public:
 	Recurso() {
 		srand(time(0));
 	}
-	//limites son x12 y10 a x110 y32
+
 
 
 	void generarRecursos() {
@@ -46,14 +47,7 @@ public:
 			reciclablesArr.agregarReciclables(nuevoReciclables);
 			nuevoReciclables->dibujar_residuo();
 		}
-		for (int i = 0; i < 7; ++i) {
-			int x = generarAleatorio(leftlimitx, rightlimitx);
-			int y = generarAleatorio(uplimity, downlimity);
-			Enemigo* nuevoEnemigo = new Enemigo(x, y);
-			enemigoArr.agregarEnemigo(nuevoEnemigo);
-			nuevoEnemigo->dibujar_enemigo();
 
-		}
 	}
 
 };
