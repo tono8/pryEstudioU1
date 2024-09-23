@@ -7,6 +7,8 @@
 #include "Recurso.h"
 #include "Juego.h"
 using namespace std;
+using namespace System;
+
 
 int main() {
     wS(120, 36);
@@ -35,6 +37,10 @@ int main() {
         colSemillas.colisionSemillas();
         colAgua.colisionAgua();
         colReciclables.colisionReciclables();
+
+        cout << "Contador de semillas recolectadas: " << colSemillas.getContadorSemillas() << endl;
+        cout << "Contador de agua recolectada: " << colAgua.getContadorAgua() << endl;
+        cout << "Contador de reciclables recolectados: " << colReciclables.getContadorReciclables() << endl;
 
     }
 

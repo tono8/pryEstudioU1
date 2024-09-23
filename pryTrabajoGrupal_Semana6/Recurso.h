@@ -22,8 +22,6 @@ public:
 		srand(time(0));
 	}
 
-
-
 	void generarRecursos() {
 		for (int i = 0; i < 10; i++) {
 
