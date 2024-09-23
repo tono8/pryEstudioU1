@@ -42,6 +42,7 @@ int main() {
         cout << "Contador de agua recolectada: " << colAgua.getContadorAgua() << endl;
         cout << "Contador de reciclables recolectados: " << colReciclables.getContadorReciclables() << endl;
 
+
     }
 
     return 0;
