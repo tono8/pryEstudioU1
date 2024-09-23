@@ -120,7 +120,7 @@ public:
 
 
 
-class ColisionEnemigo : public Jugador, public ArrEnemigo {//Creando clase con herencia aplicada
+//class ColisionEnemigo : public Jugador, public ArrEnemigo {//Creando clase con herencia aplicada
 
 //public://atrapamos al raton -> constructor de nuestra clase -> luego de gato -> luego de ratonera
 //	ColisionEnemigo(int x, int y) : Jugador(x_P, y_P), ArrEnemigo() {
