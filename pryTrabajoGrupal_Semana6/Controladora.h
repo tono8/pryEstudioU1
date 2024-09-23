@@ -330,6 +330,7 @@ public:
 				if (tecla == ABAJO && (fondo_juego[y_P + 3][x_P] == 0 && fondo_juego[y_P + 3][x_P + 1] == 0 && fondo_juego[y_P + 4][x_P + 2] == 0 && fondo_juego[y_P + 4][x_P + 3] == 0 && fondo_juego[y_P + 4][x_P + 4] == 0 && fondo_juego[y_P + 3][x_P + 5] == 0 && fondo_juego[y_P + 3][x_P + 6] == 0)) y_P++;
 			}
 			dibujar_jugador_v3(x_P, y_P);
+
 			Console::Title = " Tiempo: " + secs.ToString() +/* " | Vida: " +*/ " || Semillas: " + recurso4->sizeSemillas().ToString() + " | Agua: " + recurso3->sizeAgua().ToString() + " | Reciclables: " + recurso5->sizeReciclables().ToString() /*+ " || Arboles reforestados: "*/;
 		}
 	}

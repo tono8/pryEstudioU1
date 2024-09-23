@@ -38,6 +38,10 @@ int main() {
         colAgua.colisionAgua();
         colReciclables.colisionReciclables();
 
+        cout << "Contador de semillas recolectadas: " << colSemillas.getContadorSemillas() << endl;
+        cout << "Contador de agua recolectada: " << colAgua.getContadorAgua() << endl;
+        cout << "Contador de reciclables recolectados: " << colReciclables.getContadorReciclables() << endl;
+
 
     }
 
