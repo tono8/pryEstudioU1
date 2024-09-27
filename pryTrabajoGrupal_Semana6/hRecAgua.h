@@ -24,7 +24,6 @@ public:
 		Console::SetCursorPosition(AguaX, AguaY);
 		Console::ForegroundColor = ConsoleColor::Black;
 		cout << " ";
-
 	}
 	int getAguaX() {
 		return AguaX;

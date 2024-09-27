@@ -13,60 +13,63 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\Personajes">
+      <UniqueIdentifier>{118c61c8-f5e2-4462-944c-f02c9cd35e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Recursos">
+      <UniqueIdentifier>{8bfc3c76-75ce-4213-8298-35d648d9a735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Recursos\Arreglos">
+      <UniqueIdentifier>{9d4e25c4-5f55-4c71-9182-31ca27996c5f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hDependencias.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="hJuego.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="hLibreria.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="hArbol.h">
+      <Filter>Archivos de encabezado\Recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="hRecAgua.h">
+      <Filter>Archivos de encabezado\Recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="hRecReciclable.h">
+      <Filter>Archivos de encabezado\Recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="hRecSemillas.h">
+      <Filter>Archivos de encabezado\Recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="hArrArbol.h">
+      <Filter>Archivos de encabezado\Recursos\Arreglos</Filter>
+    </ClInclude>
+    <ClInclude Include="hArrRecAgua.h">
+      <Filter>Archivos de encabezado\Recursos\Arreglos</Filter>
+    </ClInclude>
+    <ClInclude Include="hArrRecReciclable.h">
+      <Filter>Archivos de encabezado\Recursos\Arreglos</Filter>
+    </ClInclude>
+    <ClInclude Include="hArrRecSemillas.h">
+      <Filter>Archivos de encabezado\Recursos\Arreglos</Filter>
+    </ClInclude>
+    <ClInclude Include="hArrEnemigo.h">
+      <Filter>Archivos de encabezado\Personajes</Filter>
+    </ClInclude>
+    <ClInclude Include="hEnemigo.h">
+      <Filter>Archivos de encabezado\Personajes</Filter>
+    </ClInclude>
+    <ClInclude Include="hJugador.h">
+      <Filter>Archivos de encabezado\Personajes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="srcPrincipal.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Controladora.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencias.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Jugador.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Fondo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Agua.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ArregloAgua.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ArregloReciclable.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ArregloSemillas.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Reciclables.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Semillas.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Arbol.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemigo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ArregloArbol.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ArregloEnemigo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Recurso.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Juego.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

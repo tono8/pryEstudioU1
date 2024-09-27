@@ -1,5 +1,5 @@
 #pragma once
-#include "Semillas.h"
+#include "hRecSemillas.h"
 class ArrSemillas
 {
 protected:
@@ -14,7 +14,7 @@ public:
 	Semillas* obtenerSemillas(int indice4) {
 		return arreglo4.at(indice4);
 	}
-	int sizeSemillas() {
+	int sizeReciclables() {
 		return arreglo4.size();
 	}
 	vector<Semillas*> retornar() {

@@ -1,10 +1,9 @@
 #pragma once
-#include "Agua.h"
+#include "hRecAgua.h"
 class ArrAgua
 {
 protected:
 	vector<Agua*>arreglo3;
-	//int x_P = 60, y_P = 40;
 public:
 	ArrAgua() {
 		arreglo3 = vector<Agua*>();

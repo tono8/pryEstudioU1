@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pryEstudioU1", "pryTrabajoGrupal_Semana6\pryTrabajoGrupal_Semana6.vcxproj", "{8917111E-3192-4527-952D-85464195D367}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pryTrabajoGrupal_Semana6", "pryTrabajoGrupal_Semana6\pryTrabajoGrupal_Semana6.vcxproj", "{8917111E-3192-4527-952D-85464195D367}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

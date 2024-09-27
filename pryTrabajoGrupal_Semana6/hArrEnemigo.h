@@ -1,5 +1,5 @@
 #pragma once
-#include "Enemigo.h"
+#include "hEnemigo.h"
 class ArrEnemigo
 {
 protected:

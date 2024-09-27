@@ -1,6 +1,5 @@
 #pragma once
-class Arbol
-{
+class Arbol {
 protected:
 	int ArbolX;
 	int ArbolY;
@@ -17,7 +16,7 @@ public:
 	}
 	void dibujar_arbol() {
 		p(ArbolX, ArbolY); b_c(1), f_c(10); cout << "()";
-		p(ArbolX, ArbolY+1); cout << "||";
+		p(ArbolX, ArbolY + 1); cout << "||";
 	}
 	int getArbolX() {
 		return ArbolX;

@@ -1,5 +1,5 @@
 #pragma once
-#include "Arbol.h"
+#include "hArbol.h"
 class ArrArbol
 {
 protected:
