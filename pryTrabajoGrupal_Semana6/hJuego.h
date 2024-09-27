@@ -112,30 +112,80 @@ public:
         return contadorReciclables;
     }
 };
-class clsnEnemigo : public Jugador, public ArrEnemigo {
+class clsnEnemigo : public Jugador, public ArrEnemigo, public Enemigo {
+protected:
+    Jugador jugador;
 public:
-	clsnEnemigo() {};
-	void clsnEnem(Jugador* jugador) {
+	clsnEnemigo(Jugador& j, int x, int y) : Enemigo(x, y) {};
+	void clsnEnem() {
 		for (int i = 0; i < arreglo1.size(); i++) {
 			int _EnemX = arreglo1.at(1)->getEnmX();
 			int _EnemY = arreglo1.at(1)->getEnmY();
-			int _JX = jugador->getJX();
-			int _JY = jugador->getJY();
-			if ((_JX == _EnemX || _JX == _EnemX + 1 || _JX == _EnemX - 1) &&
-				(_JY == _EnemY || _JY == _EnemY + 1 || _JY == _EnemY - 1)) {
+			int jugadorX = jugador.getJX();
+			int jugadorY = jugador.getJY();
+			if ((jugadorX == _EnemX || jugadorX == _EnemX + 1 || jugadorX == _EnemX - 1) &&
+				(jugadorY == _EnemY || jugadorY == _EnemY + 1 || jugadorY == _EnemY - 1)) {
 
 			}
 		}
 	}
 };
+class Recurso {
+    ArrSemillas semillasArr;
+    ArrAgua aguaArr;
+    ArrReciclables reciclablesArr;
+public:
+    Recurso() {
+        srand(time(0));
+    }
+    void generarRecursos() {
+        for (int i = 0; i < 10; i++) {
+            int x = generarAleatorio(leftlimitx, rightlimitx);
+            int y = generarAleatorio(uplimity, downlimity);
+            Semillas* nuevaSemilla = new Semillas(x, y);
+            semillasArr.agregarSemillas(nuevaSemilla);
+            nuevaSemilla->dibujar_semilla();
+        }
+        for (int i = 0; i < 10; ++i) {
+            int x = generarAleatorio(leftlimitx, rightlimitx);
+            int y = generarAleatorio(uplimity, downlimity);
+            Agua* nuevoAgua = new Agua(x, y);
+            aguaArr.agregarAgua(nuevoAgua);
+            nuevoAgua->dibujar_agua(x, y);
+        }
+        for (int i = 0; i < 10; ++i) {
+            int x = generarAleatorio(leftlimitx, rightlimitx);
+            int y = generarAleatorio(uplimity, downlimity);
+            Reciclables* nuevoReciclables = new Reciclables(x, y);
+            reciclablesArr.agregarReciclables(nuevoReciclables);
+            nuevoReciclables->dibujar_residuo();
+        }
+    }
+};
 class Juego : public Jugador {
 private:
 public:
-	void fncIniciar() {
+	int fncIniciar() {
 		mtrx* matriz = new mtrx();
+        Recurso* objRecurso = new Recurso;
+
 		Jugador jugador(57, 20);
-		int Enem = generarAleatorio(3, 5);
-		matriz->mtrxFondo1();
-		//Console::Title = "xJ: " + jugador->getJX().toString();
+
+        clsnRecurso1 colSemillas(jugador, 0, 0);
+        clsnRecurso2 colAgua(jugador, 0, 0);
+        clsnRecurso3 colReciclables(jugador, 0, 0);
+
+        clsnEnemigo* fncEnem = new clsnEnemigo(jugador, 1, 1);
+
+        while (1) {
+            int Enem = generarAleatorio(3, 5);
+            objRecurso->generarRecursos();
+
+            matriz->mtrxFondo1();
+
+            Console::Title = "xJ: " + fncEnem->getJX().ToString();
+            Console::Title += "yJ: " + fncEnem->getJY().ToString();
+        }
+        return 0;
 	}
 };
