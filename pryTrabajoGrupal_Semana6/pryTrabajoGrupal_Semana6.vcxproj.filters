@@ -66,6 +66,9 @@
     <ClInclude Include="hJugador.h">
       <Filter>Archivos de encabezado\Personajes</Filter>
     </ClInclude>
+    <ClInclude Include="hMovil.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="srcPrincipal.cpp">

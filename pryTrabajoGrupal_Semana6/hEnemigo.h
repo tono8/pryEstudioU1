@@ -1,8 +1,8 @@
 #pragma once
-class Enemigo
-{
+#include "hMovil.h"
+class Enemigo : public Movil {
 protected:
-	int EnmX, EnmY;
+	int EnmX, EnmY, _xj, _yJ;
 	int dX, dY;
 public:
 	Enemigo(int x, int y) {
@@ -30,30 +30,30 @@ public:
 		Console::SetCursorPosition(EnmX, EnmY + 1);
 		cout << "       ";
 	}
-	void mover_enemigo(int direccion) {
-		//Direccion 0 es ABAJO
-		//Direccion 1 es ARRIBA
-		//Direccion 2 es Derecha
-		//Direccion 3 es Izquierda
-		if (direccion == 0) {
-			if (EnmY - 1 != uplimity) {
-				EnmY--;
-			}
+	void mover_enemigo(int xJ, int yJ) {
+		_xj = xJ;
+		_yJ = yJ;
+		// Moviendo el enemigo atravez el
+		// Eje X
+		if (x == _xj) {
+			x += 0;
 		}
-		if (direccion == 1) {
-			if (EnmY + 1 != downlimity) {
-				EnmY++;
-			}
+		else if (x < _xj) {
+			x += dx;
 		}
-		if (direccion == 2) {
-			if (EnmX + 1 != rightlimitx) {
-				EnmX++;
-			}
+		else if (x > _xj) {
+			x -= dx;
 		}
-		if (direccion == 3) {
-			if (EnmX - 1 != leftlimitx) {
-				EnmX--;
-			}
+		// Moviendo el enemigo atravez el
+		// Eje y
+		if (y == _yJ) {
+			y += 0;
+		}
+		else if (y < _yJ) {
+			y += dy;
+		}
+		else if (y > _yJ) {
+			y -= dy;
 		}
 	}
 	int getEnmX() {

@@ -30,6 +30,7 @@
     <ClInclude Include="hJuego.h" />
     <ClInclude Include="hJugador.h" />
     <ClInclude Include="hLibreria.h" />
+    <ClInclude Include="hMovil.h" />
     <ClInclude Include="hRecAgua.h" />
     <ClInclude Include="hRecReciclable.h" />
     <ClInclude Include="hRecSemillas.h" />

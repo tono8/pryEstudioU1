@@ -7,8 +7,135 @@
 #include "hArrRecSemillas.h"
 #include "hArrRecReciclable.h"
 #include "hArrArbol.h"
-class Juego : public Jugador {
+int generarAleatorio(int M, int N) {
+	int tam = rand() % (N - M + 1) + M;//GENERAMOS EL NUMERO ALEATORIO
+	return tam;
+}
+class clsnRecurso1 : public ArrAgua, public Agua {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorAgua;
+
 public:
-	Juego();
-	~Juego();
+    clsnRecurso1(Jugador& j, int x, int y) : Agua(x, y), jugador(j), collected(false), contadorAgua(0) {}
+
+    void colisionAgua() {
+        collected = false;
+        for (int i = 0; i < arreglo3.size(); i++) {
+            int _AguaX = arreglo3.at(i)->getAguaX();
+            int _AguaY = arreglo3.at(i)->getAguaY();
+
+            int jugadorX = jugador.getJX();
+            int jugadorY = jugador.getJY();
+
+            if ((jugadorX == _AguaX || jugadorX == _AguaX + 1 || jugadorX == _AguaX - 1) &&
+                (jugadorY == _AguaY || jugadorY == _AguaY + 1 || jugadorY == _AguaY - 1)) {
+
+                arreglo3.at(i)->borrar_agua();
+                arreglo3.erase(arreglo3.begin() + i);
+                i--;
+                collected = true;
+                contadorAgua++;
+            }
+        }
+    }
+    int getContadorAgua() {
+        return contadorAgua;
+    }
+};
+class clsnRecurso2 : public ArrSemillas, public Semillas {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorSemillas;
+
+public:
+    clsnRecurso2(Jugador& j, int x, int y) : Semillas(x, y), jugador(j), collected(false), contadorSemillas(0) {
+    }
+
+    void colisionSemillas() {
+        collected = false;
+        for (int i = 0; i < arreglo4.size(); i++) {
+            int _SmiX = arreglo4.at(i)->getSmiX();
+            int _SmiY = arreglo4.at(i)->getSmiY();
+
+            int jugadorX = jugador.getJX();
+            int jugadorY = jugador.getJY();
+
+            // Lógica de colisión
+            if ((jugadorX == _SmiX || jugadorX == _SmiX + 1 || jugadorX == _SmiX - 1) &&
+                (jugadorY == _SmiY || jugadorY == _SmiY + 1 || jugadorY == _SmiY - 1)) {
+                arreglo4.at(i)->borrar_semilla();
+                arreglo4.erase(arreglo4.begin() + i);
+                i--;
+                collected = true;
+                contadorSemillas++;
+            }
+        }
+    }
+    int getContadorSemillas() {
+        return contadorSemillas;
+    }
+};
+class clsnRecurso3 : public ArrReciclables, public Reciclables {
+protected:
+    Jugador jugador;
+    bool collected;
+    int contadorReciclables;
+
+public:
+    clsnRecurso3(Jugador& j, int x, int y) : Reciclables(x, y), jugador(j), collected(false), contadorReciclables(0) {
+    }
+
+    void colisionReciclables() {
+        collected = false;
+
+        for (int i = 0; i < arreglo5.size(); i++) {
+            int _ReciX = arreglo5.at(i)->getReciX();
+            int _ReciY = arreglo5.at(i)->getReciY();
+
+            int jugadorX = jugador.getJX();
+            int jugadorY = jugador.getJY();
+            if ((jugadorX == _ReciX || jugadorX == _ReciX + 1 || jugadorX == _ReciX - 1) &&
+                (jugadorY == _ReciY || jugadorY == _ReciY + 1 || jugadorY == _ReciY - 1)) {
+
+                arreglo5.at(i)->borrar_residuo();
+                arreglo5.erase(arreglo5.begin() + i);
+                i--;
+                collected = true;
+                contadorReciclables++;
+            }
+        }
+    }
+    int getContadorReciclables() {
+        return contadorReciclables;
+    }
+};
+class clsnEnemigo : public Jugador, public ArrEnemigo {
+public:
+	clsnEnemigo() {};
+	void clsnEnem(Jugador* jugador) {
+		for (int i = 0; i < arreglo1.size(); i++) {
+			int _EnemX = arreglo1.at(1)->getEnmX();
+			int _EnemY = arreglo1.at(1)->getEnmY();
+			int _JX = jugador->getJX();
+			int _JY = jugador->getJY();
+			if ((_JX == _EnemX || _JX == _EnemX + 1 || _JX == _EnemX - 1) &&
+				(_JY == _EnemY || _JY == _EnemY + 1 || _JY == _EnemY - 1)) {
+
+			}
+		}
+	}
+};
+class Juego : public Jugador {
+private:
+public:
+	void fncIniciar() {
+		mtrx* matriz = new mtrx();
+		Jugador jugador(57, 20);
+		int Enem = generarAleatorio(3, 5);
+		matriz->mtrxFondo1();
+		//Console::Title = "xJ: " + jugador->getJX().toString();
+	}
 };

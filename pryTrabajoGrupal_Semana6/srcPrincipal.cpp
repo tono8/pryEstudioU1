@@ -1,6 +1,7 @@
 #include "hJuego.h"
 int main() {
 	wS(120, 36);
+	Juego* objJuego = new Juego;
 	LOGO_EQUIPO();
 	while (1) {
 		int opc = MENU();
@@ -9,7 +10,7 @@ int main() {
 		case 1:
 			system("cls");
 			INSTRUCCIONES();
-			break;
+			objJuego->fncIniciar();
 		case 2:
 			system("cls");
 			INSTRUCCIONES_ALT();

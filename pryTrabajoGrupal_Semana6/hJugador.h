@@ -1,12 +1,16 @@
 #pragma once
-class Jugador {
+#include "hMovil.h"
+class Jugador : public Movil {
 protected:
     // Posicion del jugador
     int xJ = 57, yJ = 20;
     int saludJ = 10;
 public:
     Jugador() {};
-    Jugador(int x, int y) {};
+    Jugador(int _xC, int _yC) {
+        xJ = _xC;
+        yJ = _yC;
+    };
     ~Jugador() {};
     int getJX() {
         return xJ;
