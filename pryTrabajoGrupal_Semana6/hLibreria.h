@@ -382,6 +382,10 @@ void TITULO_MENU_116_v2(int x, int y) {
 }
 
 
+void TEXT_CONTOLS(int x, int y) {
+	p(x + 2, y); b_c(1), f_c(15); cout << "El movimiento del jugador usa";
+	p(x, y + 1); cout << "las teclas direccionales o flechas de direccion.";
+}
 void TEXT_INTEGRANTE1_L(int x, int y) {
 	p(x, y); b_c(1), f_c(15); cout << "Lieserl Ayala"; // Se nececita colocar el nombre completo
 }
