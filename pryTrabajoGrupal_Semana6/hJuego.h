@@ -130,12 +130,14 @@ public:
 		}
 	}
 };
-class Recurso {
+class Colocar {
     ArrSemillas semillasArr;
     ArrAgua aguaArr;
     ArrReciclables reciclablesArr;
+    ArrEnemigo enemigoArr;
+    Jugador* jugador;
 public:
-    Recurso() {
+    Colocar() {
         srand(time(0));
     }
     void generarRecursos() {
@@ -161,13 +163,24 @@ public:
             nuevoReciclables->dibujar_residuo();
         }
     }
+    void generarEnemigo() {
+        for (int i = 0; i < 3; i++) {
+            int x = generarAleatorio(leftlimitx, rightlimitx);
+            int y = generarAleatorio(uplimity, downlimity);
+            Enemigo* nuevoEnemigo = new Enemigo(x, y);
+            enemigoArr.agregarEnemigo(nuevoEnemigo);
+            nuevoEnemigo->borrar_enemigo();
+            //nuevoEnemigo->mover_enemigo(jugador->getJX(),jugador->getJY());
+            nuevoEnemigo->dibujar_enemigo();
+        }
+    }
 };
-class Juego : public Jugador {
+class Juego : protected Jugador {
 private:
 public:
 	int fncIniciar() {
 		mtrx* matriz = new mtrx();
-        Recurso* objRecurso = new Recurso;
+        Colocar* objColocar = new Colocar;
 
 		Jugador jugador(57, 20);
 
@@ -178,8 +191,8 @@ public:
         clsnEnemigo* fncEnem = new clsnEnemigo(jugador, 1, 1);
 
         while (1) {
-            int Enem = generarAleatorio(3, 5);
-            objRecurso->generarRecursos();
+            objColocar->generarEnemigo();
+            objColocar->generarRecursos();
 
             matriz->mtrxFondo1();
 
